@@ -1,0 +1,332 @@
+/* CSS for the Index Page */
+
+/************************* Font Section *************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+/************************* Color Code Section *************************/
+
+:root{
+    /* Light Mode Color Codes */
+    --primary-background: #EEEEEE;
+    --secondary-background: #FFFFFF;
+    --primary-dark: black;
+    --dark-shade-light: rgb(90, 84, 84);
+
+    /* Dark Mode Color Codes */
+    --primary-dark-background: #060C5B;
+
+    /* Special Options Icon Color Codes */
+    --download-icon: #5ADF11;
+    --print-icon: #FF651C;
+
+    /* Social Media Icon Color Codes */
+    --whatsapp-icon: #44C052;
+    --twitter-icon: #01A6F1;
+    --facebook-icon: #35609D;
+    --instagram-icon: #DF012B;
+    --linkedin-icon: #0077b5;
+
+    /* Common Button Colors */
+    --portfolio-button: #1829F2;
+}
+
+/************************* Reset and Page Body Setup *************************/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background: var(--primary-background);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    line-height: 1;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 910px;
+}
+
+/************************* NavBar *************************/
+
+nav{
+    background: var(--secondary-background);
+    padding: 1rem 0;
+}
+
+nav .nav-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-group .logo-section {
+    color: var(--primary-dark);
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-left: -50rem;
+}
+
+nav .nav-group img {
+    height: 45px;
+    width: 45px;
+    margin-left: 10px;
+}
+
+.nav .nav-group .special-options {
+    position: absolute;
+}
+
+nav .nav-group a {
+    background-color: var(--secondary-background);
+    border: none;
+    border-radius:40px;
+    color: var(--primary-dark);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0px 3px;
+    position: inherit;
+}
+
+nav .nav-group a:hover{
+    background: linear-gradient(to right, blue, magenta);
+    color: var(--secondary-background);
+    border: none;
+    box-shadow: 0px 0px 30px var(--dark-shade-light);
+}
+
+nav .nav-group .special-options .moon-icon {
+    margin: 0px 2px;
+    padding: 4px 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--primary-dark);
+}
+
+nav .nav-group .special-options .moon-icon:hover {
+    background-color: var(--primary-dark-background);
+    color: var(--secondary-background);
+    box-shadow: 0px 0px 10px var(--primary-dark-background);
+}
+
+nav .nav-group .special-options .print-icon {
+    margin: 0px 2px;
+    padding: 4px 4px;
+    border-radius: 50%;
+    color: var(--primary-dark);
+}
+
+nav .nav-group .special-options .print-icon:hover {
+    background-color: var(--print-icon);
+    color: var(--secondary-background);
+    box-shadow: 0px 0px 10px var(--print-icon);
+}
+
+nav .nav-group .special-options .download-icon {
+    margin: 0px 2px;
+    padding: 4px 4px;
+    border-radius: 50%;
+    color: var(--primary-dark);
+}
+
+nav .nav-group .special-options .download-icon:hover {
+    background-color: var(--download-icon);
+    color: var(--secondary-background);
+    box-shadow: 0px 0px 10px var(--download-icon);
+}
+
+nav .nav-group .special-options {
+    margin-right: 13px;
+}
+
+/************************* Main Section *************************/
+
+section.profile-section {
+    background: var(--secondary-background);
+    display: flex;
+    align-items: center;
+    padding: 2.5rem;
+    padding-top: 1rem;
+    margin-top: 60px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 25% 100%, 0 80%);
+    padding-bottom: 5rem;
+}
+
+section.profile-section .profile-pic-section {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+}
+
+section.profile-section .profile-pic-section .profile-pic img {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section.profile-section .profile-pic-section .profile-pic {
+    position: relative;
+    margin-right: 1.5rem;
+
+}
+
+section.profile-section .profile-pic-section .profile-pic span i {
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+    background: var(--whatsapp-icon);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    padding-top: 4.9px;
+    padding-left: 0.4px;
+    cursor: pointer;
+}
+
+section.profile-section .profile-pic-section .profile-pic span i:hover {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    padding-top: 6.5px;
+    padding-left: 0.4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px var(--primary-dark);
+}
+
+
+section.profile-section .profile-pic-section .personal-info h1{
+    font-size: 23px;
+    margin-bottom: 6px;
+    color:var(--primary-dark);
+}
+
+section.profile-section .profile-pic-section .personal-info h1:hover{
+    background: -webkit-linear-gradient(  blue, magenta);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section.profile-section .profile-pic-section .personal-info p {
+    font-size: 13px;
+    margin: -2px 0px 0px 2px;
+    color: var(--primary-dark);
+}
+
+section.profile-section .contact-section {
+    flex: 1;
+}
+
+section.profile-section .contact-section ul.contact-list {
+    list-style-type: none;
+    margin-bottom: 1.6rem;
+    margin-top: 1.6rem;
+}
+
+section.profile-section .contact-section ul.contact-list li {
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+    justify-content: space-around;
+    font-size: 14px;
+    font-weight: bold;
+} 
+
+section.profile-section .contact-section ul.contact-list li i {
+    margin-right: 10px;
+    font-size: 16px;
+} 
+
+section.profile-section .contact-section ul.social-media  {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    position: absolute;
+}
+
+section.profile-section .contact-section ul.social-media li{
+    margin-right:10px;
+}
+
+section.profile-section .contact-section ul.social-media li a {
+    display: flex;
+    justify-content: space-evenly;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+}
+
+section.profile-section .contact-section ul.social-media li:nth-child(1) a {
+    color: var(--facebook-icon);
+}
+
+section.profile-section .contact-section ul.social-media li:nth-child(1):hover a {
+    background: var(--facebook-icon);
+    color: var(--secondary-background);
+    transform: scale(1.2);
+    line-height: 32.8px;
+    box-shadow: 0px 0px 10px var(--primary-dark);
+}
+
+section.profile-section .contact-section ul.social-media li:nth-child(2) a {
+    color: var(--instagram-icon);
+}
+
+section.profile-section .contact-section ul.social-media li:nth-child(2):hover a {
+    color: var(--secondary-background);
+    background-image: linear-gradient(var(--facebook-icon) , magenta , orange);
+    transform: scale(1.2);
+    line-height: 32.8px;
+    box-shadow: 0px 0px 10px var(--primary-dark);
+}
+
+section.profile-section .contact-section ul.social-media li:nth-child(3) a {
+    color: var(--twitter-icon);
+}
+
+section.profile-section .contact-section ul.social-media li:nth-child(3):hover a {
+    color: var(--secondary-background);
+    background: var(--twitter-icon);
+    transform: scale(1.2);
+    line-height: 32.8px;
+    box-shadow: 0px 0px 10px var(--primary-dark);
+}
+
+section.profile-section .contact-section ul.social-media li:nth-child(4) a {
+    color: var(--linkedin-icon);
+}
+
+section.profile-section .contact-section ul.social-media li:nth-child(4):hover a {
+    color: var(--secondary-background);
+    background: var(--linkedin-icon);
+    transform: scale(1.2);
+    line-height: 32.8px;
+    box-shadow: 0px 0px 10px var(--primary-dark);
+}

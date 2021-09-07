@@ -1,0 +1,9 @@
+/* Supportive Paper */
+
+/* Portfolio button color */
+
+0px 0px 30px #2691E5, 0px 0px 50px #0068FD 
+
+/* Instagram icon background */
+
+background-image: linear-gradient(to right, blue , #F0752B ,#D72C7B);
