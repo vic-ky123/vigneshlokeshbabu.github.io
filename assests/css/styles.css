@@ -402,6 +402,7 @@ section.about-section {
     padding: 0px 0px 0px 0px;
     letter-spacing: 1px;
     position: relative;
+    /* text-transform: uppercase; */
 }
 
 section.about-section .section-left {
@@ -504,8 +505,9 @@ section.skills-section .section-left .section-inner-left {
 
 section.skills-section .section-left .section-inner-left .content-heading {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 2.5rem;
+    letter-spacing: 1px;
 }
 
 section.skills-section .section-left .section-inner-left .content-heading img {
@@ -515,8 +517,10 @@ section.skills-section .section-left .section-inner-left .content-heading img {
 
 section.skills-section .section-left .section-inner-left .content-heading h6 {
     color: var(--primary-dark);
-    font-size: 16px;
-    margin: 2px 10px 0 7px;
+    font-size: 18px;
+    margin: 20px 10px 0 15px;
+    letter-spacing: spacing 1px;
+    font-style: italic;
 }
 
 section.skills-section .section-left .section-inner-left .timeline-wrapper {
@@ -563,18 +567,98 @@ section.skills-section .section-left .section-inner-left .timeline-wrapper .time
 section.skills-section .section-right {
     flex: 2;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     float: right;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
     margin-left: -150px;
-    background: green;
-    margin-top: 90px;
+    /* background: green; */
+    margin-top: 125px;
+}
+
+section.skills-section .section-right .content-heading {
+    left: 0;
+    margin: 0 0 15px 30px;
+    font-size: 25px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+section.skills-section .section-right .category {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 section.skills-section .section-right .skill {
     width: 100px;
     height: 100px;
-    background-color: #f2f2f2;
-    margin: 50px 20px;
+    /* background-color: #f2f2f2; */
+    margin: 19px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.skills-section .section-right .category .skill p {
+    margin-top: 8px;
+    justify-content: center;
+    font-size: 13.5px;
+    cursor: pointer;
+}
+
+section.skills-section .section-right .skill .outer {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(223, 223, 223);
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), 
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    padding: 14px;
+}
+
+section.skills-section .section-right .skill .outer .inner {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                0.5px 0.5px 0 rgba(0, 0, 0, 0.15),
+                0 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+}
+
+section.skills-section .section-right .skill .outer .inner #percentage {
+    font-weight: bold;
+    font-size: 14px;
+    /* display: none; */
+}
+
+section.skills-section .section-right svg {
+    position: absolute;
+    margin-left: 2.8px;
+    margin-top: -133px;
+}
+
+section.skills-section .section-right circle {
+    fill: none;
+    stroke: url(#GradientColor1);
+    stroke-width: 13px;
+    stroke-dasharray: 274;
+    stroke-dashoffset: 274;
+    animation: anim 2s linear forwards;
+}
+
+@keyframes anim {
+    100%{
+        stroke-dashoffset: var(--stroke);
+    }
 }
