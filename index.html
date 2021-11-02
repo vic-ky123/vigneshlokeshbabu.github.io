@@ -22,16 +22,18 @@
         <nav>
             <div class="container nav-group">
                 <img src="./assests/images/Logo.jpg" alt="logo-pic">
-                <div class="logo-section">
-                    Modern CV
-                </div>
+                    <a href="/#" class="logo-section">
+                        Modern CV
+                    </a>
                 <div class="special-options">
                     <span class="moon-icon"><i title="Dark Mode" class="bi bi-moon"></i></span>
                     <span class="print-icon"><i title="Print" class="bi bi-printer"></i></span>
                     <span class="download-icon"><i title="Download" class="bi bi-download"></i></span>
-                    <a href="#">
-                        <span>Portfolio</span>
-                    </a>
+                    <!-- <div class="portfolio-section"> -->
+                        <a href="#" class="portfolio-button">
+                            <span>Portfolio</span>
+                        </a>
+                    <!-- </div> -->
                 </div>
             </div>
         </nav>
@@ -43,7 +45,9 @@
                     <div class="profile-pic">
                         <img src="./assests/images/MyImage.jpg" alt="">
                         <span>
-                        <a href="https://api.whatsapp.com/send?phone=9092137916&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."><i title="WhatsApp" class="bi bi-whatsapp"></i></a> 
+                        <a href="https://api.whatsapp.com/send?phone=9092137916&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202.">
+                            <i title="WhatsApp" class="bi bi-whatsapp"></i>
+                        </a> 
                         </span>
                     </div>
                     <div class="personal-info">
@@ -62,7 +66,7 @@
                             <i class="bi bi-telephone"></i>
                             9092137916
                         </li>
-                        <li>
+                        <li onclick="sendEmail();">
                             <i class="bi bi-envelope"></i>
                             vigneshlokeshbabu131@gmail.com
                         </li>
@@ -101,7 +105,7 @@
             <section class="about-section">
                 <h6 class="cd-headline loading-bar">
                     <span class="cd-words-wrapper">
-                        <b class="is-visible section-heading" style="font-size:20px;">About</b>
+                        <b class="is-visible section-heading" style="font-size:17.5px;">ABOUT</b>
                     </span>
                 </h6>
                 <div class="section-left">
@@ -138,7 +142,7 @@
             <section class="skills-section">
                 <h6 class="cd-headline loading-bar">
                     <span class="cd-words-wrapper">
-                        <b class="is-visible section-heading" style="font-size:20px;">Education & Skills</b>
+                        <b class="is-visible section-heading" style="font-size:17.5px;">EDUCATION & SKILLS</b>
                     </span>
                 </h6>
                 <div class="section-left">
@@ -176,11 +180,10 @@
                                 <div class="outer">
                                     <div class="inner">
                                         <div id="percentage">
-                                            60%
+                                            HTML 
                                         </div> 
                                     </div>
                                 </div>
-                                <p>HTML</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="130px" height="130px">
                                 <defs>
@@ -197,11 +200,10 @@
                                 <div class="outer">
                                     <div class="inner">
                                         <div id="percentage">
-                                            60%
+                                            CSS
                                         </div>
                                     </div>
                                 </div>
-                                <p>CSS</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="130px" height="130px">
                                 <defs>
@@ -218,11 +220,10 @@
                                 <div class="outer">
                                     <div class="inner">
                                         <div id="percentage">
-                                            60%
+                                            JavaScript
                                         </div>
                                     </div>
                                 </div>
-                                <p>JavaScript</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="130px" height="130px">
                                 <defs>
@@ -241,11 +242,10 @@
                                 <div class="outer">
                                     <div class="inner">
                                         <div id="percentage">
-                                            60%
+                                            React.JS
                                         </div>
                                     </div>
                                 </div>
-                                <p>React.JS</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="130px" height="130px">
                                 <defs>
@@ -262,11 +262,10 @@
                                 <div class="outer">
                                     <div class="inner">
                                         <div id="percentage">
-                                            60%
+                                            Bootstrap
                                         </div>
                                     </div>
                                 </div>
-                                <p>Bootstrap</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="130px" height="130px">
                                 <defs>
@@ -283,12 +282,10 @@
                                 <div class="outer">
                                     <div class="inner">
                                         <div id="percentage">
-                                            60%
+                                            SQL
                                         </div>
-                                        <!-- Data Structure -->
                                     </div>
                                 </div>
-                                <p>Data Structure</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="130px" height="130px">
                                 <defs>
@@ -297,11 +294,39 @@
                                     <stop offset="100%" stop-color="#673ab7" />
                                 </linearGradient>
                                 </defs>
-                                <circle cx="68" cy="50" r="43" style="--stroke : 123;" stroke-linecap="round" />
+                                <circle cx="68" cy="50" r="43" style="--stroke : 80;" stroke-linecap="round" />
                             </svg>
                         </div>
                     </div>  
                 </div>
+            </section>
+            <section class="project-section">
+                <h6 class="cd-headline loading-bar">
+                    <span class="cd-words-wrapper">
+                        <b class="is-visible section-heading" style="font-size:17.5px;">PROJECTS</b>
+                    </span>
+                </h6>
+                <div class="project-tiles">
+                    <div class="project">
+                        <img src="./assests/images/Screenshot (21).png" alt="" class="sample-img">
+                        <img src="./assests/images/Screenshot (102).png" alt="" class="sample-img">
+                        <img src="./assests/images/Screenshot (102).png" alt="" class="sample-img">
+                    </div>
+                </div>
+            </section>
+            <section class="feedback-section">
+                <h6 class="cd-headline loading-bar">
+                    <span class="cd-words-wrapper">
+                        <b class="is-visible section-heading" style="font-size:17.5px;">HEAR FROM MY TEACHERS</b>
+                    </span>
+                </h6>
+            </section>
+            <section class="contact-section">
+                <h6 class="cd-headline loading-bar">
+                    <span class="cd-words-wrapper">
+                        <b class="is-visible section-heading" style="font-size:17.5px;">CONTACT ME</b>
+                    </span>
+                </h6>
             </section>
         </main>
 
