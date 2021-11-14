@@ -1,3 +1,7 @@
 Future Updates... :)
 
 1) Add Github link in the social media section.
+2) Add form validation in contact section.
+3) Connect the form with gmail to send message.
+4) Create teacher's testimonials.
+5) Complete Project section.

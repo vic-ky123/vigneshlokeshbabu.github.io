@@ -7,6 +7,8 @@
 /************************* Color Code Section *************************/
 
 :root{
+    /* Used these colors as required regardless of the theme and category.*/
+
     /* Light Mode Color Codes */
     --primary-background: #EEEEEE;
     --secondary-background: #FFFFFF;
@@ -27,8 +29,15 @@
     --instagram-icon: #DF012B;
     --linkedin-icon: #0077b5;
 
+    /* Error & Success Message Color Codes */
+
+    --error: rgb(255, 23, 23);
+    --succes: rgb(80, 255, 80);
+
     /* Common Button Colors */
     --portfolio-button: #1829F2;
+    --shade-brite: blue;
+    --mild-danger: magenta;
 }
 
 /************************* Reset and Page Body Setup *************************/
@@ -43,6 +52,7 @@ body{
     font-family: 'Ubuntu', sans-serif;
     background: var(--primary-background);
     -webkit-font-smoothing: antialiased;
+    cursor: default;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -69,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .decor-section-2 {
     content:"";
-    background-image: linear-gradient(to right, blue, magenta);
+    background-image: linear-gradient(to right, blue, var(--mild-danger));
     color: blue;
     margin-top: -48px;
     height: 50px;
@@ -105,19 +115,19 @@ nav .nav-group{
     justify-content: space-between;
 }
 
-nav .nav-group .logo-section {
+/* nav .nav-group .logo-section {
     color: var(--primary-dark);
     font-size: 18px;
     letter-spacing: 1px;
     font-weight: bold;
-    margin-left: -48rem;
-    /* cursor:default; */
-}
+    margin-left: -47rem;
+    cursor:default;
+} */
 
-nav .nav-group img {
-    height: 45px;
-    width: 45px;
-    margin-left: 10px;
+nav .nav-group a img {
+    height: 55px;
+    width: 165px;
+    margin: -7px 0 -7px 5px;
 }
 
 .nav .nav-group .special-options {
@@ -131,7 +141,7 @@ nav .nav-group .portfolio-button {
     transition: 
       background-position .2s ease-in-out, 
       color .2s ease-in-out;
-    border-image: linear-gradient(to right, blue, magenta) 1;
+    border-image: linear-gradient(to right, blue, var(--mild-danger)) 1;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -146,10 +156,9 @@ nav .nav-group .portfolio-button:hover, .portfolio-button:focus {
     color: var(--secondary-background);
     padding: 8px 12px;
     overflow: hidden;
-    /* border: 3px solid var(--primary-dark); */
     background-size: 100% 200%; 
     background-position: 0% 100%;
-    background-image: linear-gradient(to bottom, #fff 50%, rgb(80, 79, 79) 50%);
+    background-image: linear-gradient(to bottom, #fff 50%, var(--primary-dark-background) 50%);
 }
 
 nav .nav-group .special-options .moon-icon {
@@ -282,7 +291,7 @@ section.profile-header-section .profile-pic-section .personal-info h1{
 }
 
 section.profile-header-section .profile-pic-section .personal-info h1:hover{
-    background: -webkit-linear-gradient(  blue, magenta);
+    background: -webkit-linear-gradient(  blue, var(--mild-danger));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -355,7 +364,7 @@ section.profile-header-section .contact-section ul.social-media li:nth-child(2) 
 
 section.profile-header-section .contact-section ul.social-media li:nth-child(2):hover a {
     color: var(--secondary-background);
-    background-image: linear-gradient(var(--facebook-icon) , magenta , orange);
+    background-image: linear-gradient(var(--facebook-icon) , var(--mild-danger) , orange);
     transform: scale(1.2);
     line-height: 32.8px;
     box-shadow: 0px 0px 10px var(--primary-dark);
@@ -531,7 +540,8 @@ section.skills-section .section-left .section-inner-left .content-heading h6 {
 
 section.skills-section .section-left .section-inner-left .timeline-wrapper {
     border-left: 2px solid rgb(77, 74, 74);
-    height: calc(100% - 126px);
+    height: calc(100% - 116px);
+    margin-top: 10px;
 }
 
 section.skills-section .section-left .section-inner-left .timeline-wrapper .timeline-item:nth-child(1) {
@@ -558,7 +568,7 @@ section.skills-section .section-left .section-inner-left .timeline-wrapper .time
     border: 2px solid rgb(77, 74, 74);
     border-radius: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-60%);
 }
 
 section.skills-section .section-left .section-inner-left .timeline-wrapper .timeline-item p {
@@ -696,7 +706,7 @@ section.project-section .project-tiles {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 100px 0 0 -98px;
+    margin: 90px 0 0 -98px;
     /* width: 100%; */
 }
 
@@ -757,4 +767,277 @@ section.contact-section {
     line-height: 22px;
     background-color: var(--secondary-background);
     color: var(--primary-dark);
+}
+
+section.contact-section .section-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width:50%;
+    margin: 80px 10px 0 -125px;
+}
+
+section.contact-section .section-left .contact-me-left {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+section.contact-section .section-left .contact-me-left .icon {
+    margin: 10px 15px 10px 0;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+section.contact-section .section-left .contact-me-left .contact-details p:nth-child(1) {
+    font-weight: 650;
+    margin-bottom: 2px;
+}
+
+section.contact-section .section-left .contact-me-left .contact-details p:nth-child(2) {
+    font-size: 14.5px;
+}
+
+section.contact-section .section-left .social-media {
+    margin: 15px 0 0 -10px;
+    z-index: 10;
+}
+
+section.contact-section .section-left .social-media ul.social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+section.contact-section .section-left .social-media ul.social-links li {
+    font-size: 17.5px;
+}
+
+section.contact-section .section-left .social-media li:nth-child(1) a {
+    color: var(--facebook-icon);
+    z-index: 10;
+}
+
+section.contact-section .section-left .social-media li:nth-child(1):hover a {
+    color: var(--secondary-background);
+    background-color: var(--facebook-icon);
+    transform: scale(1.2);
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px var(--primary-dark);
+}
+section.contact-section .section-left .social-media li:nth-child(2) a {
+    color: var(--instagram-icon);
+}
+
+section.contact-section .section-left .social-media li:nth-child(2):hover a {
+    color: var(--secondary-background);
+    background-image: linear-gradient(var(--facebook-icon) , var(--mild-danger) , orange);
+    transform: scale(1.2);
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px var(--primary-dark);
+}
+
+section.contact-section .section-left .social-media li:nth-child(3) a {
+    color: var(--twitter-icon);
+}
+
+section.contact-section .section-left .social-media li:nth-child(3):hover a {
+    color: var(--secondary-background);
+    background-color: var(--twitter-icon);
+    transform: scale(1.2);
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px var(--primary-dark);
+}
+
+section.contact-section .section-left .social-media li:nth-child(4) a {
+    color: var(--linkedin-icon);
+}
+
+section.contact-section .section-left .social-media li:nth-child(4):hover a {
+    color: var(--secondary-background);
+    background-color: var(--linkedin-icon);
+    transform: scale(1.2);
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px var(--primary-dark);
+}
+
+section.contact-section .section-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width:50%;
+    margin-top: 80px;
+    border: 3.5px solid;
+    border-image: linear-gradient(to bottom, rgb(0, 0, 207), blue,
+      rgb(230, 2, 230),
+      rgb(250, 169, 183),
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+    background-color: #f2f2f2;
+}
+
+section.contact-section .section-right form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: -5px;
+    padding: 10px;
+    height: auto;
+}
+
+section.contact-section form .name-mail-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+section.contact-section form .form-element {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 10px;
+}
+
+section.contact-section form .form-element label {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* :required:input[type="text"]:invalid {
+    color: red;
+    border: 1px solid red;
+} */
+
+section.contact-section form .form-element input {
+    padding: 7px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid var(--primary-dark);
+}
+
+/* section.contact-section form .form-element input:focus {
+    outline: none;
+    border: 2px solid blue;
+    box-shadow: 0px 0px 5px var(--primary-dark);
+} */
+
+section.contact-section form .form-element input:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 0px 0px 3px var(--primary-dark);
+    transition: 0.2s linear;
+}
+
+section.contact-section form .form-element textarea {
+    width: 96.3%;
+    padding: 7px;
+    font: inherit;
+    font-size: 14px;
+    border: none;
+    margin-bottom: 15px;
+    resize: vertical;
+    border-bottom: 1px solid var(--primary-dark);
+}
+
+section.contact-section form .form-element textarea:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 0px 0px 3px var(--primary-dark);
+    transition: 0.2s linear;
+}
+
+section.contact-section form .form-element button {
+    width: 96.3%;
+    padding: 3px;
+    font: inherit;
+    font-size: 14px;
+    border: 2px solid;
+    letter-spacing: 1px;
+    transition: 
+      background-position .2s ease-in-out, 
+      color .2s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border-image: linear-gradient(to right, blue, var(--mild-danger)) 1;
+    background: var(--secondary-background);
+}
+
+section.contact-section form .form-element button:hover, button:focus {
+    color: var(--secondary-background);
+    overflow: hidden;
+    background-size: 100% 200%; 
+    background-position: 0% 100%;
+    background-image: linear-gradient(to bottom, #fff 50%, var(--primary-dark-background) 50%);
+}
+
+/* Error message Section */
+
+.error-msg-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-background);
+    background-color: var(--error);
+    padding: 10px;
+    margin: 0 20rem;
+    border-radius: 4px;
+    top: 20px;
+}
+
+/* Copy-right Section */
+
+.copy-right-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.copy-right-section span {
+    font-size: 17px;
+}
+
+/* Scroll-to-top Section */
+
+.scroll-to-top-section {
+    position:fixed;
+	width: 40px;
+	height:40px;
+	bottom:40px;
+	right:30px;
+	background-color: var(--secondary-background);
+	color: var(--primary-dark-background);
+	border-radius:50px;
+    border: 1px solid var(--primary-dark);
+	text-align:center;
+    font-size:20px;
+    padding-top: 7px;
+	box-shadow: 0px 0px 3px #999;
+    z-index:100;
+}
+
+.scroll-to-top-section:hover, .scroll-to-top-section:focus {
+    cursor: pointer;
+    color: var(--secondary-background);
+    overflow: hidden;
+    background-size: 100% 200%; 
+    background-position: 0% 100%;
+    background-image: linear-gradient(to bottom, #fff 50%, var(--primary-dark-background) 50%);
+    transition: 0.3s linear background;
 }

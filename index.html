@@ -21,9 +21,9 @@
         <!-- ******************** Nav-Bar Section ******************** -->
         <nav>
             <div class="container nav-group">
-                <img src="./assests/images/Logo.jpg" alt="logo-pic">
+                <!-- <img src="./assests/images/Logo.jpg" alt="logo-pic"> -->
                     <a href="/#" class="logo-section">
-                        Modern CV
+                        <img src="./assests/images/My-Logo.png" alt="logo-pic">
                     </a>
                 <div class="special-options">
                     <span class="moon-icon"><i title="Dark Mode" class="bi bi-moon"></i></span>
@@ -64,7 +64,7 @@
                     <ul class="contact-list">
                         <li>
                             <i class="bi bi-telephone"></i>
-                            9092137916
+                            +91 90921 37916
                         </li>
                         <li onclick="sendEmail();">
                             <i class="bi bi-envelope"></i>
@@ -111,9 +111,8 @@
                 <div class="section-left">
                     <h4>Hi there, I'm Vignesh Lokeshbabu!</h4>
                     <p class="intro-para">
-                        I'm a Web-developer and it's been few months working as web-developer. 
-                        I have developed websites and provided my services to my clients as a Digital Marketeer to promote their 
-                        beautiful websites as well. <br /> Go down my CV to explore my Skills and Flair. 
+                        I'm a Web-developer and it's been few months working as one, which is my passion. 
+                        I have designed and developed websites to my clients to meet their requirements and needs. Go down through my page to explore my Skills and Flair. 
                     </p>
                 </div>
                 <div class="section-right">
@@ -146,29 +145,29 @@
                     </span>
                 </h6>
                 <div class="section-left">
-                <div class="section-inner-left">
-                    <div class="content-heading">
-                            <img src="./assests/images/Education.png" alt="Education">
-                            <h6>Education</h6>
+                    <div class="section-inner-left">
+                        <div class="content-heading">
+                                <img src="./assests/images/Education.png" alt="Education">
+                                <h6>Education</h6>
+                        </div>
+                        <div class="timeline-wrapper">
+                                <div class="timeline-item">
+                                    <p>2013 - 2016</p>
+                                    <p class="edu-level">10<sup>th</sup> - 12<sup>th</sup></p>
+                                    <p>Secondary Education</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <p>2016 - 2019</p>
+                                    <p class="edu-level">UG</p>
+                                    <p>Bachelor of Computer Applications</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <p>2019 - 2021</p>
+                                    <p class="edu-level">PG</p>
+                                    <p>Master of Computer Applications</p>
+                                </div>
+                        </div>
                     </div>
-                    <div class="timeline-wrapper">
-                            <div class="timeline-item">
-                                <p>2013 - 2016</p>
-                                <p class="edu-level">10<sup>th</sup> - 12<sup>th</sup></p>
-                                <p>Secondary Education</p>
-                            </div>
-                            <div class="timeline-item">
-                                <p>2016 - 2019</p>
-                                <p class="edu-level">UG</p>
-                                <p>Bachelor of Computer Applications</p>
-                            </div>
-                            <div class="timeline-item">
-                                <p>2019 - 2021</p>
-                                <p class="edu-level">PG</p>
-                                <p>Master of Computer Applications</p>
-                            </div>
-                    </div>
-                </div>
                 </div>
                 <div class="section-right">
                     <div class="content-heading">
@@ -321,23 +320,116 @@
                     </span>
                 </h6>
             </section>
+
             <section class="contact-section">
                 <h6 class="cd-headline loading-bar">
                     <span class="cd-words-wrapper">
                         <b class="is-visible section-heading" style="font-size:17.5px;">CONTACT ME</b>
                     </span>
                 </h6>
+                <div class="section-left">
+                    <div class="contact-me-left">
+                        <i class="bi bi-telephone-outbound icon"></i>
+                        <div class="contact-details">
+                            <p>Feel free to call me...</p>
+                            <p>+91 90921 37916</p>
+                        </div>
+                    </div>
+                    <div class="contact-me-left">
+                        <i class="bi bi-envelope icon"></i>
+                        <div class="contact-details">
+                            <p>Mail to...</p>
+                            <p>vigneshlokeshbabu131@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-me-left">
+                        <i class="bi bi-geo-alt icon"></i>
+                        <div class="contact-details">
+                            <p>Find me...</p>
+                            <p>Korattur, Chennai, IN</p>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <ul class="social-links">
+                            <li title="Facebook">
+                                <a href="#">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+                            <li title="Instagram">
+                                <a href="#">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                            <li title="Twitter">
+                                <a href="#">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </li>
+                            <li title="LinkedIn">
+                                <a href="#">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-right">
+                       <form id="contactform" method="post" action="">
+                            <div class="name-mail-section">
+                                <div class="form-element">
+                                    <label for="name">Name <span style="color:red;">*</span></label>
+                                    <input type="text" name="name" placeholder="Your Name" id="name">
+                                </div>
+                                <div class="form-element">
+                                    <label for="email">Email ID <span style="color:red;">*</span></label>
+                                    <input type="text" name="email" placeholder="Your Email ID" id="email">
+                                </div>
+                            </div>
+                            <div class="message-button-section">
+                                <div class="form-element">
+                                    <label for="message">Message <span style="color:red;">*</span></label>
+                                    <textarea id="message" name="message" rows="3" cols="5" placeholder="Your message...:)"></textarea>
+                                </div>
+                                <div class="form-element">
+                                    <button type="submit">Send</button>
+                                </div>
+                            </div>
+                       </form>
+                </div>
             </section>
         </main>
 
+        <!-- Error Message Section-->
+
+        <!-- <div id="errormsg" class="error-msg-section"></div> -->
+
+        <!-- Success Message Section-->
+
+        <div id="successmsg" class="success-msg-section"></div>
+
+        <!-- Copyright Section -->
+
+        <div class="copy-right-section">
+            <p>2021 <span>&copy;</span> Copyright || All rights reserved.</p>
+        </div>
+
         <!-- Scroll Top Section -->
+
+        <div class="scroll-to-top-section" title="Scroll to Top">
+            <span>
+                <i class="bi bi-caret-up-fill"></i>
+            </span>
+        </div>
 
         <!-- HTML to PDF Conversion -->
 
         <!-- JavaScript Section -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>                
         <script type="text/javascript" src="./assests/plugins/headlines/headline.js"></script> 
         <script type="text/javascript" src="./assests/js/main.js"></script>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     </body>
 </html>

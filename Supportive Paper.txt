@@ -7,3 +7,75 @@
 /* Instagram icon background */
 
 background-image: linear-gradient(to right, blue , #F0752B ,#D72C7B);
+
+
+/* Skills section code */
+
+<div class="category">
+                    <div>
+                        <div class="skill">
+                            <div class="outer">
+                                <div class="inner">
+                                    <div id="percentage">
+                                        60%
+                                    </div>
+                                </div>
+                            </div>
+                            <p>C</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="130px" height="130px">
+                            <defs>
+                               <linearGradient id="GradientColor2">
+                                  <stop offset="0%" stop-color="#e91e63" />
+                                  <stop offset="100%" stop-color="#673ab7" />
+                               </linearGradient>
+                            </defs>
+                            <circle cx="68" cy="50" r="43" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="skill">
+                            <div class="outer">
+                                <div class="inner">
+                                    <div id="percentage">
+                                        60%
+                                    </div>
+                                </div>
+                            </div>
+                            <p>C++</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="130px" height="130px">
+                            <defs>
+                               <linearGradient id="GradientColor2">
+                                  <stop offset="0%" stop-color="#e91e63" />
+                                  <stop offset="100%" stop-color="#673ab7" />
+                               </linearGradient>
+                            </defs>
+                            <circle cx="68" cy="50" r="43" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="skill">
+                            <div class="outer">
+                                <div class="inner">
+                                    <div id="percentage">
+                                        60%
+                                    </div>
+                                    <!-- Java -->
+                                </div>
+                            </div>
+                            <p>Java</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="130px" height="130px">
+                            <defs>
+                               <linearGradient id="GradientColor2">
+                                  <stop offset="0%" stop-color="#e91e63" />
+                                  <stop offset="100%" stop-color="#673ab7" />
+                               </linearGradient>
+                            </defs>
+                            <circle cx="68" cy="50" r="43" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                
