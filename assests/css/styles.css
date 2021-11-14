@@ -31,8 +31,8 @@
 
     /* Error & Success Message Color Codes */
 
-    --error: rgb(255, 23, 23);
-    --succes: rgb(80, 255, 80);
+    --error-msg: rgb(255, 23, 23);
+    --success-msg: rgb(80, 255, 80);
 
     /* Common Button Colors */
     --portfolio-button: #1829F2;
@@ -937,8 +937,8 @@ section.contact-section form .form-element input {
 section.contact-section form .form-element input:focus {
     outline: none;
     border: 1px solid blue;
-    box-shadow: 0px 0px 3px var(--primary-dark);
-    transition: 0.2s linear;
+    box-shadow: 0px 0px 4px var(--primary-dark);
+    transition: 0.3s linear;
 }
 
 section.contact-section form .form-element textarea {
@@ -955,8 +955,8 @@ section.contact-section form .form-element textarea {
 section.contact-section form .form-element textarea:focus {
     outline: none;
     border: 1px solid blue;
-    box-shadow: 0px 0px 3px var(--primary-dark);
-    transition: 0.2s linear;
+    box-shadow: 0px 0px 4px var(--primary-dark);
+    transition: 0.3s linear;
 }
 
 section.contact-section form .form-element button {
@@ -986,7 +986,7 @@ section.contact-section form .form-element button:hover, button:focus {
 
 /* Error message Section */
 
-.error-msg-section {
+/* .error-msg-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -996,7 +996,54 @@ section.contact-section form .form-element button:hover, button:focus {
     margin: 0 20rem;
     border-radius: 4px;
     top: 20px;
-}
+} */
+
+/* Message Status Section */
+
+#status {
+    width: max-content;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: auto auto;
+    position: fixed;
+    z-index: 100;
+    bottom: 70px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: var(--primary-dark);
+    border-radius: 8px;
+  }
+  #status.success {
+    background-color: var(--success-msg);
+    animation: status 4s ease forwards;
+    box-shadow: 0px 1px 5px var(--dark-shade-light);
+  }
+  #status.error {
+    background-color: var(--error-msg);
+    color: var(--secondary-background);
+    animation: status 4s ease forwards;
+    box-shadow: 0px 1px 5px var(--dark-shade-light);
+  }
+  @keyframes status {
+    0% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    50% {
+        opacity: 1;
+        pointer-events: all;
+      }
+    90% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  
 
 /* Copy-right Section */
 
@@ -1019,7 +1066,7 @@ section.contact-section form .form-element button:hover, button:focus {
     position:fixed;
 	width: 40px;
 	height:40px;
-	bottom:40px;
+	bottom:35px;
 	right:30px;
 	background-color: var(--secondary-background);
 	color: var(--primary-dark-background);

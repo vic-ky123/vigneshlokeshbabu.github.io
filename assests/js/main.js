@@ -1,6 +1,4 @@
-// const sendEmail = () => {
-//     window.location.href = "mailto:vigneshlokeshbabu131@gmail.com";
-// }
+// Form Validation Section
 
 const fullname = document.getElementById("name");
 const email = document.getElementById("email");
@@ -32,5 +30,53 @@ form.addEventListener("submit", (e) => {
     if(errmsg.length > 0) {
         e.preventDefault();
         errormessage.innerHTML = errmsg.join(", ");
+    } else {
+        // return true;
     }
 })
+
+// Success Message 
+
+function success() {
+    const status = document.getElementById("status");
+    form.reset();
+    status.classList.add("success");
+    status.innerHTML = "Your message got recorded. Thank you for connecting...:)";
+}
+
+function error() {
+    const status = document.getElementById("status");
+    form.reset();
+    status.classList.add("error");
+    status.innerHTML = "Oops! There was a problem.";
+  }
+
+// Sending Message from Form to Mail ID Section
+
+function sendMessage() {
+    console.log("This function is working");
+    var name = $('#name').val();
+    var email = $('#email').val();
+    var message = $('#message').val();
+    var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Message: ' + message;
+    console.log(name, email, message);
+
+    Email.send({
+        SecureToken: "02a53baa-a290-44cf-b2d2-809c706d3f13",
+        To : "vigneshlokeshbabu131@gmail.com",
+        From : `${email}`,
+        Subject : `New Message from ${name} via NewGen CV.`,
+        Body : Body
+    }).then (
+      message => {
+            if(message == 'OK') {
+                success();
+            } else {
+                error();
+            }
+        }
+    );
+}
+
+
+
