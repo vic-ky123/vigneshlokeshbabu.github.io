@@ -984,20 +984,6 @@ section.contact-section form .form-element button:hover, button:focus {
     background-image: linear-gradient(to bottom, #fff 50%, var(--primary-dark-background) 50%);
 }
 
-/* Error message Section */
-
-/* .error-msg-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--secondary-background);
-    background-color: var(--error);
-    padding: 10px;
-    margin: 0 20rem;
-    border-radius: 4px;
-    top: 20px;
-} */
-
 /* Message Status Section */
 
 #status {

@@ -1,3 +1,5 @@
+// Contact Form Section
+
 // Form Validation Section
 
 const fullname = document.getElementById("name");
@@ -35,7 +37,7 @@ form.addEventListener("submit", (e) => {
     }
 })
 
-// Success Message 
+// Success & Error Messages Section 
 
 function success() {
     const status = document.getElementById("status");
@@ -58,7 +60,7 @@ function sendMessage() {
     var name = $('#name').val();
     var email = $('#email').val();
     var message = $('#message').val();
-    var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Message: ' + message;
+    var body = 'Name: ' + name + '<br>Email: ' + email + '<br>Message: ' + message;
     console.log(name, email, message);
 
     Email.send({
@@ -66,7 +68,7 @@ function sendMessage() {
         To : "vigneshlokeshbabu131@gmail.com",
         From : `${email}`,
         Subject : `New Message from ${name} via NewGen CV.`,
-        Body : Body
+        Body : body
     }).then (
       message => {
             if(message == 'OK') {
@@ -78,5 +80,21 @@ function sendMessage() {
     );
 }
 
+// Go-to-top Scroll Section
 
+const scrollTopBtn = document.getElementById("scrolltop");
+scrollTopBtn.style.display = "none";
 
+window.onscroll = function () { scrollToTopFunction() };
+
+function scrollToTopFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+}
+
+function goToTopFunc() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
