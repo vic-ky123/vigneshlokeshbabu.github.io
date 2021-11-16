@@ -42,13 +42,17 @@
 
 /************************* Reset and Page Body Setup *************************/
 
-*{
+* {
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
 
-body{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     font-family: 'Ubuntu', sans-serif;
     background: var(--primary-background);
     -webkit-font-smoothing: antialiased;
@@ -907,7 +911,8 @@ section.contact-section form .form-element {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 0 10px;
+    margin: 0 10px 18px 10px;
+    position: relative;
 }
 
 section.contact-section form .form-element label {
@@ -925,6 +930,7 @@ section.contact-section form .form-element input {
     padding: 7px;
     font-size: 14px;
     border: none;
+    display: block;
     border-bottom: 1px solid var(--primary-dark);
 }
 
@@ -941,15 +947,59 @@ section.contact-section form .form-element input:focus {
     transition: 0.3s linear;
 }
 
+section.contact-section form .form-element.success input {
+    border-color: var(--success-msg);
+}
+
+section.contact-section form .form-element.error input {
+    border-color: var(--error-msg);
+}
+
+section.contact-section form .form-element i {
+    visibility:hidden;
+    position: absolute;
+    top: 33px;
+    right: 10px;
+}
+
+section.contact-section form .form-element.success i.bi-check2-circle {
+    visibility: visible;
+    color: var(--success-msg);
+}
+
+section.contact-section form .form-element.error i.bi-exclamation-circle {
+    visibility: visible;
+    color: var(--error-msg);
+}
+
+section.contact-section form .form-element i.textarea-i {
+    visibility:hidden;
+    position: absolute;
+    top: 33px;
+    right: 32px;
+}
+
 section.contact-section form .form-element textarea {
-    width: 96.3%;
+    width: 96%;
     padding: 7px;
     font: inherit;
     font-size: 14px;
     border: none;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     resize: vertical;
     border-bottom: 1px solid var(--primary-dark);
+}
+
+section.contact-section form .form-element.success textarea {
+    border-color: var(--success-msg);
+}
+
+section.contact-section form .form-element.error textarea {
+    border-color: var(--error-msg);
+}
+
+section.contact-section form .text-area-section {
+    margin-top: -12px;
 }
 
 section.contact-section form .form-element textarea:focus {
@@ -959,11 +1009,25 @@ section.contact-section form .form-element textarea:focus {
     transition: 0.3s linear;
 }
 
+section.contact-section form .form-element small {
+    position: absolute;
+    bottom: -41px;
+    margin-bottom: 20px;
+    left: 0;
+    visibility: hidden;
+    color: var(--error-msg);
+}
+
+section.contact-section form .form-element.error small {
+    visibility: visible;
+}
+
 section.contact-section form .form-element button {
     width: 96.3%;
     padding: 3px;
     font: inherit;
     font-size: 14px;
+    margin-top: 10px;
     border: 2px solid;
     letter-spacing: 1px;
     transition: 
