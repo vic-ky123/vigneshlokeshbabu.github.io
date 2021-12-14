@@ -9,15 +9,23 @@
         <link rel="icon" type="image/png" href="./assests/images/Logo.jpg"/>
 
         <!-- CSS Section -->
-        <link rel="stylesheet" href="./assests/css/styles.css">
-        <link rel="stylesheet" href="./assests//plugins/headlines/headline.css">
+        <link rel="stylesheet" type="text/css" href="./assests/css/styles.css">
+
+        <!-- Light Slider JS Section -->
+        <link rel="stylesheet" type="text/css" href="./assests/css/lightslider.css">
+        <script type="text/javascript" src="./assests/js/JQuery-CDN.js"></script>
+        <script type="text/javascript" src="./assests/js/lightslider.js"></script>
+
+        <!-- Headlines Plug-in Section -->
+        <link rel="stylesheet" type="text/css" href="./assests//plugins/headlines/headline.css">
 
         <!-- Bootstrap Icon Section -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
+       
         <title>Vignesh Lokeshbabu</title>
     </head>
-    <body>
+    <body oncontextmenu="return false;">
         <!-- ******************** Nav-Bar Section ******************** -->
         <nav>
             <div class="container nav-group">
@@ -30,7 +38,7 @@
                     <span class="print-icon"><i title="Print" class="bi bi-printer"></i></span>
                     <span class="download-icon"><i title="Download" class="bi bi-download"></i></span>
                     <!-- <div class="portfolio-section"> -->
-                        <a href="#" class="portfolio-button">
+                        <a href="#" target="_blank" class="portfolio-button">
                             <span>Portfolio</span>
                         </a>
                     <!-- </div> -->
@@ -45,7 +53,7 @@
                     <div class="profile-pic">
                         <img src="./assests/images/MyImage.jpg" alt="">
                         <span>
-                        <a href="https://api.whatsapp.com/send?phone=9092137916&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202.">
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=9092137916&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202.">
                             <i title="WhatsApp" class="bi bi-whatsapp"></i>
                         </a> 
                         </span>
@@ -66,7 +74,7 @@
                             <i class="bi bi-telephone"></i>
                             +91 90921 37916
                         </li>
-                        <li onclick="sendEmail();">
+                        <li>
                             <i class="bi bi-envelope"></i>
                             vigneshlokeshbabu131@gmail.com
                         </li>
@@ -78,7 +86,7 @@
                             </a>
                         </li>
                         <li title="Instagram" class="media-icon instagram">
-                            <a href="#">
+                            <a target="_blank" href="https://www.instagram.com/_im_mr.melophile_/">
                                 <i class="bi bi-instagram"></i>
                             </a>
                         </li>
@@ -87,8 +95,8 @@
                                 <i class="bi bi-twitter"></i>
                             </a>
                         </li>
-                        <li title="Twitter" class="media-icon whatsapp">
-                            <a href="#">
+                        <li title="LinkedIn" class="media-icon whatsapp">
+                            <a target="_blank" href="https://www.linkedin.com/in/vignesh-lokeshbabu-a976491a5?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BdEwnUZh8Tjm81TzChA0VPw%3D%3D">
                                 <i class="bi bi-linkedin"></i>
                             </a>
                         </li>
@@ -101,7 +109,7 @@
             <div class="decor-section-2">.</div>
             <div class="decor-section-3">.</div>
 
-            <!-- ******************** Profile Body Section ******************** -->
+            <!-- ******************** Profile Section ******************** -->
             <section class="about-section">
                 <h6 class="cd-headline loading-bar">
                     <span class="cd-words-wrapper">
@@ -138,6 +146,7 @@
                     </p>
                 </div>
             </section>
+            <!-- ******************** Skills Section ******************** -->
             <section class="skills-section">
                 <h6 class="cd-headline loading-bar">
                     <span class="cd-words-wrapper">
@@ -299,28 +308,36 @@
                     </div>  
                 </div>
             </section>
+            <!-- ******************** Projects Section ******************** -->
             <section class="project-section">
                 <h6 class="cd-headline loading-bar">
                     <span class="cd-words-wrapper">
                         <b class="is-visible section-heading" style="font-size:17.5px;">PROJECTS</b>
                     </span>
                 </h6>
-                <div class="project-tiles">
-                    <div class="project">
-                        <img src="./assests/images/Screenshot (21).png" alt="" class="sample-img">
-                        <img src="./assests/images/Screenshot (102).png" alt="" class="sample-img">
-                        <img src="./assests/images/Screenshot (102).png" alt="" class="sample-img">
-                    </div>
-                </div>
+                
             </section>
+            <!-- ******************** Feedback Section ******************** -->
             <section class="feedback-section">
                 <h6 class="cd-headline loading-bar">
                     <span class="cd-words-wrapper">
                         <b class="is-visible section-heading" style="font-size:17.5px;">HEAR FROM MY TEACHERS</b>
                     </span>
                 </h6>
+                <div class="slider">
+                    <div class="person-details">
+                        <img src="./assests/images/abhishek sir.jpg" class="photo-img" alt="Image">
+                        <h4>- ABHISHEK PANDEY <br />
+                            <span>MSc., MCA, MPhil., PGDDM, PhD. (Pursuing)</span>
+                        </h4>
+                        <img src="./assests/images/double-quote-top-left.png" class="quotation" alt="Double Quote">
+                    </div>
+                    <p> Your passion for learning new things and your dedication to your work is obvious in everything you do. Thank you for being such a fantastic student. 
+                        God bless you and good luck for all your future endeavors. Please continue to make us proud.
+                    </p>
+                </div>
             </section>
-
+            <!-- ******************** Contact Section ******************** -->
             <section class="contact-section">
                 <h6 class="cd-headline loading-bar">
                     <span class="cd-words-wrapper">
@@ -357,7 +374,7 @@
                                 </a>
                             </li>
                             <li title="Instagram">
-                                <a href="#">
+                                <a target="_blank" href="https://www.instagram.com/_im_mr.melophile_/">
                                     <i class="bi bi-instagram"></i>
                                 </a>
                             </li>
@@ -367,7 +384,7 @@
                                 </a>
                             </li>
                             <li title="LinkedIn">
-                                <a href="#">
+                                <a target="_blank" href="https://www.linkedin.com/in/vignesh-lokeshbabu-a976491a5?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BdEwnUZh8Tjm81TzChA0VPw%3D%3D">
                                     <i class="bi bi-linkedin"></i>
                                 </a>
                             </li>
@@ -375,7 +392,7 @@
                     </div>
                 </div>
                 <div class="section-right">
-                       <form id="contactform" method="post">
+                       <form id="contactform" method="post" action="javascript:sendMessage()">
                             <div class="name-mail-section">
                                 <div class="form-element">
                                     <label for="name">Name <span style="color:red;">*</span></label>
@@ -408,6 +425,55 @@
                 </div>
             </section>
         </main>
+
+        <!-- Modal Section -->
+
+            <!-- MIM Modal -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span id="close" class="close">&times;</span>
+                        <h2>Project - <span id="project-title"></span></h2>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Description</h4>
+                        <p id="description"></p>
+                        <h4>Technology Used</h4>
+                        <p id="tech-used"></p>
+                        <h4>No. of Personnel</h4>
+                        <p id="no-of-personnel"></p>
+                        <h4>Duration</h4>
+                        <p id="duration"></p>
+                        <h4>Link</h4>
+                        <a id="link"></a>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="close-btn">Close</button>  
+                    </div>
+                </div>
+            </div>
+
+             <!-- MIM Student Portal Modal -->
+             <!-- <div id="mim-stud-portal-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Modal Header</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>This is my modal</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus nisi, sunt consectetur ipsa velit
+                        repudiandae aperiam modi quisquam nihil nam asperiores doloremque mollitia dolor deleniti quibusdam nemo
+                        commodi ab.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus nisi, sunt consectetur ipsa velit
+                            repudiandae aperiam modi quisquam nihil nam asperiores doloremque mollitia dolor deleniti quibusdam nemo
+                            commodi ab.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button>Close</button>  
+                    </div>
+                </div>
+            </div> -->
         
         <!-- Success Message Section-->
 
@@ -430,11 +496,14 @@
         <!-- HTML to PDF Conversion -->
 
         <!-- JavaScript Section -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>                
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>                
         <script type="text/javascript" src="./assests/plugins/headlines/headline.js"></script> 
         <script type="text/javascript" src="./assests/js/main.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
+        <!-- <script type="text/javascript" src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+        <!-- <script type="text/javascript" src="./assests/js/JQuery-CDN.js"></script>
+        <script type="text/javascript" src="./assests/js/lightslider.js"></script> -->
 
     </body>
 </html>
