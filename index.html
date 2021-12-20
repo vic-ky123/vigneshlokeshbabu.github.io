@@ -11,10 +11,13 @@
         <!-- CSS Section -->
         <link rel="stylesheet" type="text/css" href="./assests/css/styles.css">
 
+        <!-- Swiper.JS Section -->
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
         <!-- Light Slider JS Section -->
-        <link rel="stylesheet" type="text/css" href="./assests/css/lightslider.css">
+        <!-- <link rel="stylesheet" type="text/css" href="./assests/css/lightslider.css">
         <script type="text/javascript" src="./assests/js/JQuery-CDN.js"></script>
-        <script type="text/javascript" src="./assests/js/lightslider.js"></script>
+        <script type="text/javascript" src="./assests/js/lightslider.js"></script> -->
 
         <!-- Headlines Plug-in Section -->
         <link rel="stylesheet" type="text/css" href="./assests//plugins/headlines/headline.css">
@@ -315,7 +318,57 @@
                         <b class="is-visible section-heading" style="font-size:17.5px;">PROJECTS</b>
                     </span>
                 </h6>
-                
+                <p id="slide-reminder">(Please Slide)</p>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="image-anim">
+                                    <img src="./assests/images/Screenshot (21).png" alt="" class="sample-img">
+                                    <i id="mim-modal-btn" class="bi bi-eye" title="View Project"></i>
+                                </div>
+                                <div class="project-container">
+                                    <h6 id="title">MEASI Institute of Management</h6>
+                                    <hr>
+                                    <div id="project-info">
+                                        <p id="project-info" style="margin-left: -2px;">A project given by my college management which was aimed to develop a responsive website.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="image-anim">
+                                    <img src="./assests/images/Screenshot (102).png" alt="" class="sample-img">
+                                    <i id="mim-stud-portal-modal-btn" class="bi bi-eye" title="View Project"></i>
+                                </div>
+                                <div class="project-container">
+                                    <h6 id="title">MIM Student Portal</h6>
+                                    <hr>
+                                    <div id="project-info">
+                                        <p id="project-info" style="margin-left: -2px;">A project given by my college management to develop a dynamic Student Management Portal.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project">
+                                <div class="image-anim">
+                                    <img src="./assests/images/Screenshot (21).png" alt="" class="sample-img">
+                                    <i id="go-vegan-modal-btn" class="bi bi-eye" title="View Project"></i>
+                                </div>
+                                <div class="project-container">
+                                    <h6 id="title">GoVegan</h6>
+                                    <hr>
+                                    <div id="project-info">
+                                        <p id="project-info" style="margin-left: -2px;">This is a blog website developed with my personal likes about Veganism.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project-pagination" class="swiper-pagination"></div>
+                </div>
             </section>
             <!-- ******************** Feedback Section ******************** -->
             <section class="feedback-section">
@@ -428,52 +481,29 @@
 
         <!-- Modal Section -->
 
-            <!-- MIM Modal -->
-            <div id="modal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span id="close" class="close">&times;</span>
-                        <h2>Project - <span id="project-title"></span></h2>
-                    </div>
-                    <div class="modal-body">
-                        <h4>Description</h4>
-                        <p id="description"></p>
-                        <h4>Technology Used</h4>
-                        <p id="tech-used"></p>
-                        <h4>No. of Personnel</h4>
-                        <p id="no-of-personnel"></p>
-                        <h4>Duration</h4>
-                        <p id="duration"></p>
-                        <h4>Link</h4>
-                        <a id="link"></a>
-                    </div>
-                    <div class="modal-footer">
-                        <button id="close-btn">Close</button>  
-                    </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span id="close" class="close" onclick="closeModal()">&times;</span>
+                    <h2>Project - <span id="project-title"></span></h2>
+                </div>
+                <div class="modal-body">
+                    <h4>Description</h4>
+                    <p id="description"></p>
+                    <h4>Technology Used</h4>
+                    <p id="tech-used"></p>
+                    <h4>No. of Personnel</h4>
+                    <p id="no-of-personnel"></p>
+                    <h4>Duration</h4>
+                    <p id="duration"></p>
+                    <h4>Link</h4>
+                    <a id="link"></a>
+                </div>
+                <div class="modal-footer">
+                    <button id="close-btn" onclick="closeModal()">Close</button>  
                 </div>
             </div>
-
-             <!-- MIM Student Portal Modal -->
-             <!-- <div id="mim-stud-portal-modal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close">&times;</span>
-                        <h2>Modal Header</h2>
-                    </div>
-                    <div class="modal-body">
-                        <p>This is my modal</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus nisi, sunt consectetur ipsa velit
-                        repudiandae aperiam modi quisquam nihil nam asperiores doloremque mollitia dolor deleniti quibusdam nemo
-                        commodi ab.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus nisi, sunt consectetur ipsa velit
-                            repudiandae aperiam modi quisquam nihil nam asperiores doloremque mollitia dolor deleniti quibusdam nemo
-                            commodi ab.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button>Close</button>  
-                    </div>
-                </div>
-            </div> -->
+        </div>
         
         <!-- Success Message Section-->
 
@@ -501,9 +531,27 @@
         <script type="text/javascript" src="./assests/js/main.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
-        <!-- <script type="text/javascript" src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
-        <!-- <script type="text/javascript" src="./assests/js/JQuery-CDN.js"></script>
-        <script type="text/javascript" src="./assests/js/lightslider.js"></script> -->
+        <script type="text/javascript" src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script type="module">
+            var swiper = new Swiper('.swiper', {
+              effect: 'coverflow',
+              grabCursor: true,
+              centeredSlides: true,
+              slidesPerView: 3,
+              coverflowEffect: {
+                rotate: 0,
+                stretch: -30,
+                depth: 0,
+                modifier: 1,
+                slideShadows: false,
+              },
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type: 'bullets',
+              },
+            });
+        </script>
 
     </body>
 </html>

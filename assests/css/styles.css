@@ -449,6 +449,8 @@ section.about-section .section-left .intro-para {
     line-height: 21px;
     margin-top: 15px;
     justify-content: center;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 section.about-section .section-left p::first-letter {
@@ -707,7 +709,7 @@ section.project-section {
     height: auto;
     padding: 4rem;
     display: flex;
-    /* flex-direction: row; */
+    flex-direction: column;
     /* position: relative; */
     margin-top: -125px;
     overflow: hidden;
@@ -719,11 +721,162 @@ section.project-section {
     color: var(--primary-dark);
 }
 
+section.project-section .swiper {
+    width: 100%;
+    height: 100%;
+    margin: 20px auto;
+    position: relative;
+    justify-content: center;
+}
+
+section.project-section .swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/* section.project-section .swiper .swiper-slide:hover {
+    transform: scale(1.1);
+} */
+
+section.project-section .swiper .swiper-slide .project {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+/* section.project-section .swiper .swiper-slide .project:hover {
+    box-shadow: 0px 0px 5px var(--primary-dark);
+} */
+
+section.project-section .swiper .swiper-slide .project .image-anim {
+    margin: 0 auto;
+}
+
+section.project-section .swiper .swiper-slide .project .image-anim img {
+    width: 249px;
+    height: 160px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom: none;
+}
+
+section.project-section .swiper .swiper-slide .project .image-anim img:hover {
+    border: none;
+    background-color: var(--primary-dark);
+    cursor: pointer;
+    filter: brightness(60%);
+    -webkit-filter: brightness(60%);
+    opacity: 0.5;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    backface-visibility: hidden;
+    background-blend-mode: darken;
+}
+
+section.project-section .swiper .swiper-slide .project .image-anim i {
+    position: absolute;
+    display: inline-block;
+    bottom: 50%;
+    transition: all 0.5s ease;
+    will-change: bottom;
+    left: 50%;
+    visibility: hidden;
+    font-size: 22px;
+    color: var(--secondary-background);
+    background-color: var(--primary-dark);
+    border-radius: 50%;
+    padding: 8px 7px 7px 7px;
+    cursor: pointer;
+    margin-left: -15px;
+}
+
+section.project-section .swiper .swiper-slide .project .image-anim:hover i {
+    bottom: 75%;
+    transform: translateY(75%);
+    visibility: visible;
+}
+
+section.project-section .swiper .swiper-slide .project .image-anim:hover i:hover {
+    color: var(--primary-dark);
+    background-color: var(--secondary-background);
+}
+
+section.project-section .swiper .swiper-slide .project .project-container {
+    width: 249px;
+    padding: 0 12.5px;
+    margin-top: -5px;
+    border-top: none;
+    border: 1px solid var(--primary-dark);
+    transition: all 0.5s ease;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+section.project-section .swiper .swiper-slide .project:hover .project-container {
+    background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%);
+}
+
+section.project-section .swiper .swiper-slide .project .project-container #title {
+    margin: 15px auto;
+    font-size: 14.5px;
+    font-weight: bolder;
+}
+
+section.project-section .swiper .swiper-slide .project .project-container hr {
+    width: 75%;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 1px solid var(--dark-shade-light);
+}
+
+section.project-section .swiper .swiper-slide .project:hover .project-container hr {
+    border-bottom: 1px solid var(--primary-dark);
+}
+
+section.project-section .swiper .swiper-slide .project .project-container p#project-info {
+    margin: 15px auto 25px 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#slide-reminder {
+    margin: 10px 0;
+    font-size: 15px;
+    font-style: italic;
+}
+
+#project-pagination {
+    bottom: -30px;
+    position: sticky;
+    z-index: 1;
+}
+
 /* Feedback Section */
 
 section.feedback-section {
     height: auto;
-    padding: 4rem 4rem 2rem 4rem;
+    padding: .5rem 4rem 2rem 4rem;
     /* display: flex; */
     /* flex-direction: row; */
     margin-top: -125px;
@@ -1119,49 +1272,53 @@ section.contact-section form .form-element button:hover, button:focus {
     top: 0;
     height: 100%;
     width: 100%;
-    /* overflow: auto; */
     background-color: rgba(0, 0, 0, 0.5);
-  }
+}
   
-  .modal-content {
+.modal-content {
     margin: 1% auto;
     width: 60%;
     height: 100%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: modalopen;
     animation-duration: var(--modal-duration);
-  }
+}
   
-  .modal-header h2,
-  .modal-footer h3 {
+.modal-header h2,
+.modal-footer h3 {
     margin: 0;
-  }
+}
   
-  .modal-header {
+.modal-header {
     background: var(--primary-dark-background);
     padding: 17px 20px;
     letter-spacing: 2px;
     color: #fff;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
-  }
+}
   
-  .modal-body {
+.modal-body {
     padding: 20px 25px;
     background: var(--secondary-background);
     color: var(--primary-dark);
     height: 80%;
     overflow-y: scroll;
     scroll-behavior: smooth;
-  }
+}
 
-  .modal-body h4 {
+.modal-body h4 {
     margin-bottom: 10px;
-  }
+}
 
-  .modal-body p, a, div#sample-image {
+.modal-body p, a, div#sample-image {
     margin-bottom: 20px;
-  }
+}
+
+.modal-body p {
+    text-align: justify;
+    text-justify: inter-word;
+}
 
   .modal-body ul {
     padding-left: 25px;
