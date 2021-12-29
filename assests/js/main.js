@@ -162,11 +162,14 @@ mimModalBtn.addEventListener('click', () => {
     modal.style.display = 'block';
     document.getElementById("project-title").innerHTML = "MEASI Institute of Management";
     document.getElementById("description").innerHTML = "MEASI Institute of Management is a real-time website for our college, which was proposed by the management of our institute. Under the guidance of our faculty members and Branding Guidelines provided by the management, we students (a team of 5 members) partitioned the website into modules and implemented the project using HTML, CSS, JavaScript along with Bootstrap Template. <br><br> <span style=\"margin-left: 25px;\"></span>In this project, I was chosen as the team leader for the project team. The result for my part of work is the Homepage, Admission Module and PRIME module. And I brought in the responsiveness wherever required and helped my fellow team-mates to complete the tasks.";
-    document.getElementById("tech-used").innerHTML = "HTML, CSS, JavaScript, BootStrap Templates.";
+    document.getElementById("tech-used").innerHTML = "HTML, CSS, JavaScript, BootStrap & few templates.";
     document.getElementById("no-of-personnel").innerHTML = "5 + 2 (Faculties)";
     document.getElementById("duration").innerHTML = "2 months (approx.)";
-    document.getElementById("status").innerHTML = "Completed";
-    document.getElementById("link").innerHTML = "Not available... :(";
+    document.getElementById("project-status").innerHTML = "Completed";
+    document.getElementById("link").innerHTML = "https://drive.google.com/drive/folders/1-7j2oS0TdXVYvV5dJ3zdUI9_0ljGluNb?usp=sharing";
+    document.getElementById("link").href = "https://drive.google.com/drive/folders/1-7j2oS0TdXVYvV5dJ3zdUI9_0ljGluNb?usp=sharing";
+    document.getElementById("link").target = "_blank";
+    document.getElementById("link-desc").innerHTML = "(Website is not active. Open the above link for sample images.)"
 })
 
 mimStudPortalModalBtn.addEventListener('click', () => {
@@ -176,7 +179,11 @@ mimStudPortalModalBtn.addEventListener('click', () => {
     document.getElementById("tech-used").innerHTML = "MERN Stack";
     document.getElementById("no-of-personnel").innerHTML = "7 + 3 (Faculties)";
     document.getElementById("duration").innerHTML = "5 months (approx.)";
-    document.getElementById("link").innerHTML = "Not available... :(";
+    document.getElementById("project-status").innerHTML = "Partially completed";
+    document.getElementById("link").innerHTML = "https://drive.google.com/drive/folders/1HYkU_Cm_id4waT0_hizIy7ZUuEBwniYY?usp=sharing";
+    document.getElementById("link").href = "https://drive.google.com/drive/folders/1HYkU_Cm_id4waT0_hizIy7ZUuEBwniYY?usp=sharing";
+    document.getElementById("link").target = "_blank";
+    document.getElementById("link-desc").innerHTML = "(Portal is not active. Open the above link for sample images.)"
 })
 
 goVeganModalBtn.addEventListener('click', () => {
@@ -186,7 +193,10 @@ goVeganModalBtn.addEventListener('click', () => {
     document.getElementById("tech-used").innerHTML = "HTML Template";
     document.getElementById("no-of-personnel").innerHTML = "1";
     document.getElementById("duration").innerHTML = "3 days";
-    document.getElementById("link").innerHTML = "Yet to update";
+    document.getElementById("link").innerHTML = "#";
+    document.getElementById("link").href = "#";
+    document.getElementById("link").target = "_blank";
+    document.getElementById("project-status").innerHTML = "Completed";
 })
 
 function closeModal() { 
