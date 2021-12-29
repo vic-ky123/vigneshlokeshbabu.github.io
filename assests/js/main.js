@@ -6,9 +6,10 @@ const fullname = document.getElementById("name");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
 const form = document.getElementById("contactform");
-// const errormessage = document.getElementById("errormsg");
+const errormessage = document.getElementById("errormsg");
 
 form.addEventListener('submit', (e) => {
+    console.log("it's working")
     e.preventDefault();
     checkInputs();
     sendMessage();
@@ -21,7 +22,7 @@ function checkInputs() {
     // for trimming the whitespaces
     const fullNameValue = fullname.value.trim();
     const emailValue = email.value.trim();
-    const messageValue = message.value.trim();
+    const messageValue = message.value;
 
     if (fullNameValue === '' || fullNameValue === null) {
         setErrorFor(fullname, 'Name Can\'t be empty.')
@@ -164,6 +165,7 @@ mimModalBtn.addEventListener('click', () => {
     document.getElementById("tech-used").innerHTML = "HTML, CSS, JavaScript, BootStrap Templates.";
     document.getElementById("no-of-personnel").innerHTML = "5 + 2 (Faculties)";
     document.getElementById("duration").innerHTML = "2 months (approx.)";
+    document.getElementById("status").innerHTML = "Completed";
     document.getElementById("link").innerHTML = "Not available... :(";
 })
 
@@ -189,4 +191,26 @@ goVeganModalBtn.addEventListener('click', () => {
 
 function closeModal() { 
     modal.style.display = 'none';
+}
+
+// |------------- Feedback Section -------------|
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); 
 }
