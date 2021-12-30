@@ -6,10 +6,9 @@ const fullname = document.getElementById("name");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
 const form = document.getElementById("contactform");
-const errormessage = document.getElementById("errormsg");
 
 form.addEventListener('submit', (e) => {
-    console.log("it's working")
+    console.log("event listener is working")
     e.preventDefault();
     checkInputs();
     sendMessage();
@@ -26,22 +25,22 @@ function checkInputs() {
 
     if (fullNameValue === '' || fullNameValue === null) {
         setErrorFor(fullname, 'Name Can\'t be empty.')
-        form.preventDefault();
+        // form.preventDefault();
     }
 
     if (emailValue === '' || emailValue === null) {
         setErrorFor(email, 'Email can\'t be empty.');
-        form.preventDefault();
+        // form.preventDefault();
     } else {
         if (!validmail) {
             setErrorFor(email,'Please enter a valid Email ID.');
-            form.preventDefault();
+            // form.preventDefault();
         }
     }
 
     if (messageValue === '' || messageValue === null) {
         setErrorFor(message, 'Please enter a Message.')
-        form.preventDefault();
+        // form.preventDefault();
     }
 
     return true;
@@ -69,18 +68,18 @@ function success() {
     window.setInterval('refresh()', 2000); 
 }
 
-// Refresh or reload page.
-
-function refresh() {
-    window.location.reload();
-}
-
 function error() {
     const status = document.getElementById("status");
     form.reset();
     status.classList.add("error");
     status.innerHTML = "Oops! There was a problem.";
-  }
+}
+
+// Refresh or reload page.
+
+function refresh() {
+    window.location.reload();
+}
 
 // Sending Message from Form to Mail ID Section
 
@@ -129,27 +128,27 @@ function goToTopFunc() {
 
 // |------------- Prevent Inspect Element Section -------------|
 
-// document.onkeydown = function(e) {
-//     if(event.keyCode === 123)
-//     {
-//         return false;
-//     }
+document.onkeydown = function(e) {
+    if(event.keyCode === 123)
+    {
+        return false;
+    }
 
-//     if(e.ctrlKey && e.shiftKey && e.keyCode === 'I'.charCodeAt(0)) 
-//     {
-//         return false;
-//     }
+    if(e.ctrlKey && e.shiftKey && e.keyCode === 'I'.charCodeAt(0)) 
+    {
+        return false;
+    }
 
-//     if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0))
-//     {
-//         return false;
-//     }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0))
+    {
+        return false;
+    }
     
-//     if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
-//     {
-//         return false;
-//     }
-// }
+    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))
+    {
+        return false;
+    }
+}
 
 // |------------- Project Model Section -------------|
 
