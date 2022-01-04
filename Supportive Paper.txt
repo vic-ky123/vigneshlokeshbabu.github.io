@@ -636,3 +636,80 @@ section.project-section .project #project-info {
                         </div> -->
                     </div>
                 </div>
+
+
+
+
+/* **************** Feedback Section Css1 *************** */
+
+section.feedback-section .slider {
+    z-index: 10;
+    /* padding-top: 30px; */
+    padding: 0.5rem 1.5rem 1rem 1.5rem;
+    margin: 4rem 7rem 3.5rem 7rem;
+    /* text-align: left;
+    justify-content: left; */
+    /* width: 100%; */
+    height: max-content;
+    width: auto;
+    /* margin: 0 auto; */
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px var(--dark-shade-light);
+    /* align-items: center; */
+}
+section.feedback-section .slider .quotation {
+    height: 80px;
+    width: 50px;
+    margin-top: 20px;
+    /* filter: brightness(70%);
+    -webkit-filter: brightness(70%); */
+    opacity: 0.25;
+}
+
+section.feedback-section .slider .photo-img {
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 0 5px var(--primary-dark);
+    border-radius: 50%;
+    border: 1px solid var(--primary-dark);
+    margin: 15px 15px 0 0;
+}
+
+section.feedback-section .slider .person-details {
+    display: flex;
+    flex-direction: row;
+    z-index: 5;
+}
+
+section.feedback-section .slider p {
+    /* width: 50%; */
+    margin: 0 auto;
+    margin-top: 7px;
+    padding: 0 2rem 1.5rem 2rem;
+    justify-content: left;
+    font-style: italic;
+}
+
+section.feedback-section .slider p::first-letter {
+    margin-left: 100px;
+}
+
+section.feedback-section .slider .person-details h4 {
+    /* width: 50%; */
+    margin: 40px 0;
+    margin-left: 2px;
+    font-size: large;
+    line-height: 2rem;
+    justify-content: left;
+}
+
+section.feedback-section .slider .person-details h4 span {
+    font-weight: 600;
+    font-size: 14px;
+    padding-left: 8px;
+    margin-top: 20px;
+    font-style: italic;
+}                
